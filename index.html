@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Panificados - POO</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Gestión de Panificados</h1>
+        <button id="cerrarSesionBtn">Cerrar sesión</button>
+    </header>
+
+    <section id="panelControles">
+        <button id="togglePreciosBtn">Mostrar/ocultar precios</button>
+        <button id="addStockBtn">Agregar nuevo producto</button>
+        <button onclick="location.href='estadisticas.html'">Ver estadísticas</button>
+    </section>
+
+    <section id="productosSection">
+        <h2>Productos</h2>
+        <div id="productosContainer"></div>
+    </section>
+
+    <section id="totalesSection">
+        <h2>Totales</h2>
+        <div id="totalesContainer"></div>
+    </section>
+
+    <section id="turnosSection">
+        <h2>Configuración de turnos</h2>
+        <label>Mañana inicio:<input type="time" id="inicioManana"></label>
+        <label>Mañana fin:<input type="time" id="finManana"></label>
+        <label>Tarde inicio:<input type="time" id="inicioTarde"></label>
+        <label>Tarde fin:<input type="time" id="finTarde"></label>
+    </section>
+
+    <script type="module" src="app-poo.js"></script>
+</body>
+</html>

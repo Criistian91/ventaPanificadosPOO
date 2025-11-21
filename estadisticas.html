@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Estadísticas - Panificados</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Estadísticas de Ventas - Panificados</h1>
+    <div class="header-actions">
+      <button id="volverBtn">← Volver</button>
+      <button id="exportarCSVBtn">⬇️ Exportar CSV</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="resumenSection">
+      <h2>Resumen rápido</h2>
+      <div id="resumenTotales"></div>
+    </section>
+
+    <section id="charts">
+      <div class="chart-card">
+        <h3>Top productos más vendidos</h3>
+        <canvas id="chartTopProductos" height="200"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>Ventas por categoría</h3>
+        <canvas id="chartCategorias" height="200"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>Ingresos reales vs venta esperada</h3>
+        <canvas id="chartIngresos" height="200"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>Promedio de unidades vendidas por producto</h3>
+        <canvas id="chartPromedios" height="200"></canvas>
+      </div>
+    </section>
+
+    <section id="tablaSection">
+      <h3>Detalle por producto</h3>
+      <table id="tablaProductos">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Categoría</th>
+            <th>Stock</th>
+            <th>Vendidos</th>
+            <th>Precio Venta</th>
+            <th>Ganancia total</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="estadisticas.js"></script>
+</body>
+</html>
